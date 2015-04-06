@@ -4,7 +4,7 @@
   "description": "Simple lazy loading component built with react",
   "main": "dist/LazyLoad.js",
   "scripts": {
-    "build": "node_modules/.bin/jsx src/ dist/",
+    "build": "jsx src/ dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,7 +17,9 @@
     "type": "git",
     "url": "https://github.com/pkibbey/react-lazy-load.git"
   },
-  "author": "Phineas Kibbey",
+  "author": {
+    "name": "Phineas Kibbey"
+  },
   "email": "phineas.kibbey@gmail.com",
   "license": "MIT",
   "peerDependencies": {
@@ -26,5 +28,16 @@
   },
   "devDependencies": {
     "react-tools": ">=0.13.0"
-  }
+  },
+  "gitHead": "c3a8357c7145b0602ed6743f69e7bcf678ae3ace",
+  "readme": "## React Lazy Load Component\n\nReally simple component that renders children elements when they enter the viewport.\n\n## Install\n\n```\nnpm install --save react-lazy-load\n```\n\n## Usage\n\n```\nvar React = require('react');\n\nvar LazyLoad = require('react-lazy-load')\n\n\n// In your render\n\nreturn (\n    <LazyLoad>\n        <div>some content</div>\n    </LazyLoad>;\n)\n\n```\n\n## Props\n\n### height=\"String\"\n\nThis is used to set the elements height even when it contains no content.\n\n```\n<LazyLoad height='100px'>\n    <div>some content</div>\n</LazyLoad>;\n```",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/pkibbey/react-lazy-load/issues"
+  },
+  "homepage": "https://github.com/pkibbey/react-lazy-load",
+  "_id": "react-lazy-load@1.0.2",
+  "_shasum": "0e5d98297d46aa8d2729a91cf21ba0194cb714aa",
+  "_from": "../../../../var/folders/7g/rs_xf7f11fb_ghnzw2x0yfqr0000gn/T/npm-52567-3d1ed00d/git-cache-e839532e242f/c3a8357c7145b0602ed6743f69e7bcf678ae3ace",
+  "_resolved": "git://github.com/pkibbey/react-lazy-load#c3a8357c7145b0602ed6743f69e7bcf678ae3ace"
 }

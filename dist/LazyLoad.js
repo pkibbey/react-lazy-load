@@ -1,4 +1,5 @@
 var React = require('react/addons'),
+    ClassNames = require('classnames'),
 
     LazyLoad = React.createClass({
         displayName: 'LazyLoad',
@@ -7,7 +8,7 @@ var React = require('react/addons'),
         },
         getInitialState: function() {
             return {
-                visible: false 
+                visible: false
             };
         },
         handleScroll: function() {
@@ -35,17 +36,16 @@ var React = require('react/addons'),
         },
         render: function () {
             var renderEl = '',
-                cx = React.addons.classSet,
                 preloadHeight = {
                     height: this.props.height
                 },
-                classes = cx({
+                classes = ClassNames({
                     'lazy-load': true,
                     'lazy-load-visible': this.state.visible
                 });
 
             return (
-                React.createElement("div", {style: preloadHeight, className: classes}, 
+                React.createElement("div", {style: preloadHeight, className: classes},
                     this.state.visible ? this.props.children : ''
                 )
             );
